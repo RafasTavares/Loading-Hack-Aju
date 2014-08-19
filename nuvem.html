@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            background-color: #87CEEB;
+            margin: 0;
+            padding: 0;
+        }
+        .centered-clouds {
+            position: fixed;
+            top: 50%;
+            z-index: 3;
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+            height: 125px;
+            text-align: center;
+            list-style: none;
+            transform: scaleY(-1) translateY(125px);
+        }
+        .clouds-loading {
+            position: fixed;
+            text-align: center;
+            top: 50%;
+            width: 100%;
+            margin: 10px auto;
+            color: #555;
+            font-size: 14pt;
+            font-family: sans-serif;
+        }
+        .centered-clouds-rain {
+            position: fixed;
+            top: 50%;
+            width: 100%;
+            height: 50%;
+            padding: 0;
+            margin: 0;
+            font-size: 11pt;
+            text-align: center;
+        }
+        .centered-clouds-rain>span {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            animation: rain 6s ease-in infinite 0s;
+            margin-top: -100%;
+            color: #000;
+            color: rgba(100, 100, 100, 0);
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        @keyframes 'rain' {
+            0% {
+                top: 0;
+                color: rgba(100, 100, 100, 0);
+            }
+            10% {
+                color: rgba(100, 100, 100, 1);
+            }
+            100% {
+                top: 100%;
+            }
+        }
+        .centered-clouds-rain>span:nth-child(1) {
+            animation-delay: 2s;
+            animation-duration: 6.5s;
+        }
+        .centered-clouds-rain>span:nth-child(2) {
+            animation-delay: 1s;
+            animation-duration: 5.5s;
+        }
+        .centered-clouds-rain>span:nth-child(3) {
+            animation-delay: 5s;
+            animation-duration: 5.7s;
+        }
+        .centered-clouds-rain>span:nth-child(4) {
+            animation-delay: 3s;
+            animation-duration: 6.2s;
+        }
+        .centered-clouds-rain>span:nth-child(5) {
+            animation-delay: 4s;
+        }
+        @keyframes 'cloud' {
+            0% {
+                height: 100px;
+                width: 100px;
+            }
+            50% {
+                height: 50px;
+                width: 50px;
+            }
+            100% {
+                height: 100px;
+                width: 100px;
+            }
+        }
+        @keyframes 'cloud-mini' {
+            0% {
+                height: 40px;
+                width: 40px;
+            }
+            50% {
+                height: 60px;
+                width: 60px;
+            }
+            100% {
+                height: 40px;
+                width: 40px;
+            }
+        }
+        @keyframes 'cloud-big' {
+            0% {
+                height: 115px;
+                width: 115px;
+            }
+            50% {
+                height: 75px;
+                width: 75px;
+            }
+            100% {
+                height: 115px;
+                width: 115px;
+            }
+        }
+        .centered-clouds>li {
+            background-color: #EEE;
+            display: inline-block;
+            vertical-align: top;
+            width: 100px;
+            height: 100px;
+            margin: 0 -10px;
+            border-bottom-left-radius: 1000px;
+            border-bottom-right-radius: 1000px;
+        }
+        .centered-clouds>li:nth-child(3) {
+            animation: cloud-big 50s ease-in-out infinite -25s;
+        }
+        .centered-clouds>li:nth-child(2) {
+            animation: cloud 23s ease-in-out infinite -8s;
+        }
+        .centered-clouds>li:first-child {
+            border-top-left-radius: 1000px;
+            animation: cloud-mini 10s ease-in-out infinite -55s;
+        }
+        .centered-clouds>li:last-child {
+            border-top-right-radius: 1000px;
+            animation: cloud-mini 7s ease-in-out infinite -60s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="centered-clouds">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="centered-clouds-rain">
+        <span>loading</span>
+        <span>loading</span>
+        <span>loading</span>
+        <span>loading</span>
+        <span>loading</span>
+        <span>loading</span>
+    </div>
+    <div class="centered-clouds-rain">
+
+    </div>
+
+</body>
+
+</html>
